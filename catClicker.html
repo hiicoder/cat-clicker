@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+
+	<title>CatClicker</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		.container{
+			text-align: center;
+			background: linear-gradient(90deg, gray, black, gray);
+			color: #fff;
+			height: 100vh;
+		}
+		h1{
+			padding:5px 30px;
+		}
+		p{
+			padding:8px;
+		}
+		.image{
+			padding-top: 5px;
+			max-width: 100%;
+			border: solid gray 3px;
+		}
+		.image img{
+			height: 450px;
+			border: solid 3px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.btn{
+			padding: 8px 30px;
+			margin: 10px;
+			border-radius: 5px;
+			color: #fff;
+			font-weight:200;
+			background-color: black;
+			border-left: none;
+		}
+
+		.btn2{
+			padding: 8px 30px;
+			margin: 10px;
+			border-radius: 5px;
+			color: #fff;
+			font-weight:200;
+			background-color: black;
+			border-right: none;
+		}
+		i{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Cat Clicker</h1>
+		<p>Like me i will count your likes...</p>
+		<div class="image">	
+			<img id ="img" src="./image/cute-cat.jpg" alt="cute-cat">
+		</div>		
+		<button class="btn2"><i class="fa fa-heart" aria-hidden="true"></i>
+
+</button>=<button class="btn">0</button>
+	</div>
+	<script type="text/javascript">
+		let count = 0;
+		const img = document.querySelector('#img');
+		img.addEventListener('click', function(){
+			count++;
+		document.querySelector('.btn').innerHTML = count;
+	})
+	</script>
+
+</body>
+</html>
